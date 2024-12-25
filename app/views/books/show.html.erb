@@ -1,0 +1,9 @@
+<p><strong>Name:</strong> <%= @book.name %></p>
+<p><strong>Publication Date:</strong> <%= @book.publication_date %></p>
+<p><strong>Price:</strong> <%= @book.price %></p>
+<p><strong>Author:</strong> <%= @book.author.name %></p>
+
+
+<p><%= link_to "Edit book", edit_book_path(@book) %></p>
+<p><%= link_to "Show all books", books_path %></p>
+<p><%= link_to "Create Books", new_book_path %></p>

@@ -1,0 +1,25 @@
+<div>
+  <%= render "form" %>
+
+  <h1> Author List</h1>
+  <% @authors.each do |author| %>
+    <div>
+      <p>
+        <strong>Name:</strong>
+        <%= author.name %>
+      </p>
+
+      <p>
+        <strong>Address:</strong>
+        <%= author.address %>
+      </p>
+
+      <p>
+        <strong>Phone number:</strong>
+        <%= author.phone_num %>
+      </p>
+
+      <%= link_to "Edit", edit_author_path(author) %> 
+      <%= link_to "Delete", author_path(author), method: :delete, data: { turbo_confirm: "Are you sure?" } %> 
+  <% end %>
+</div>

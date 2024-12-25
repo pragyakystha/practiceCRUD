@@ -1,0 +1,26 @@
+<%if @books.any?%>
+<% @books.each do |book| %>
+  <p>
+      <strong> Name: </strong>
+      <%= book.name %>
+  </p>
+  <p>
+      <strong> Publication Date: </strong>
+      <%= book.publication_date %>
+  </p>
+  <p>
+      <strong> Price: </strong>
+      <%= book.price %>
+  </p>
+  <p>
+      <strong> Author: </strong>
+      <%= book.author.name %>
+  </p>
+  <%= link_to "Edit this book", edit_book_path(book) %>
+  <%= link_to "Back to new page",new_book_path %>
+  <%= button_to "Delete this book", book_path(book), method: :delete, data: { confirm: "Are you sure you want to delete this book?" } %>
+<% end %>
+<% else %>
+<p>No books found</p>
+<%= link_to "Add a new book", new_book_path %>
+<% end %>

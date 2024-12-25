@@ -1,0 +1,16 @@
+<h1>All Posts</h1>
+<ul id="post-list">
+  <% @posts.each do |post| %>
+    <li>
+      <%= link_to post.title, post_path(post) %>
+      <%= link_to post.body, post_path(post) %>
+      <%= link_to "Edit", edit_post_path(post) %> |
+     <%= link_to "Delete this post", post_path(post), method: :delete, data: { turbo_confirm: "Are you sure you want to delete this posts?" } %>
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to "New Post", new_post_path %>
+
+
+

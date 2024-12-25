@@ -1,0 +1,23 @@
+<div >
+<%= render "form" %>
+
+<h1>Bands </h1>
+  <% @bands.each do |band| %>
+    <div>
+  <p>
+    <strong>Name:</strong>
+    <%= band.name %>
+  </p>
+
+  <p>
+    <strong>Address:</strong>
+    <%= band.address %>
+  </p>
+ 
+   <%= link_to "Edit", edit_band_path(band) %> 
+<%= link_to "Delete", band_path(band), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
+
+  </div>
+<% end %>
+</div>
+

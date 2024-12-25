@@ -1,0 +1,17 @@
+<%= form_with model: @author do |form| %>
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+  <div>
+    <%= form.label :address, style: "display: block" %>
+    <%= form.text_field :address %>
+  </div>
+  <div>
+    <%= form.label :phone_num, style: "display: block" %>
+    <%= form.text_field :phone_num %>
+  </div>
+  <div>
+    <%= form.submit "Save Author" %>
+  </div>
+<% end %>

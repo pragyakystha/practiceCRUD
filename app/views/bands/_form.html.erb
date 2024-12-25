@@ -1,0 +1,15 @@
+<%= form_with model: @band do |form| %>
+  <div>
+    <%= form.label :name, style: "display: block" %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div>
+    <%= form.label :address, style: "display: block" %>
+    <%= form.text_field :address %>
+  </div>
+
+  <div>
+    <%= form.submit "Save Band"%>
+  </div>
+<% end %>
