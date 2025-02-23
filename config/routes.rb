@@ -24,6 +24,7 @@ get "login", to: "sessions#new"
 post "login", to: "sessions#create"
 get "register", to: "users#new"
 post "register", to: "users#create"
+delete "/posts/:id", to: "posts#destroy", as: "delete_post"
 
 
 get "/users", to: redirect("/register")

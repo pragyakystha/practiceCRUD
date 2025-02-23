@@ -1,5 +1,9 @@
+import "./application"
 import Rails from "@rails/ujs";
 Rails.start();
+import "@fortawesome/fontawesome-free/css/all.css"
+
+
 import { Application } from "@hotwired/stimulus"
 
 const application = Application.start()
